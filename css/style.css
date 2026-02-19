@@ -1,3 +1,9 @@
+:root{
+  --blue: #0151ca;
+  --red: #ee8277;
+  --green: #b5e73c;
+}
+
 .banner{
   width: 100%;
   outline-style: solid;
@@ -19,13 +25,12 @@
 }
 
 .inline-link{
-  color: #fdedec;
   text-decoration-line: underline;
   text-decoration-style: wavy;
 }
 
 .blue-text{
-  color: #0151ca;
+  color: var(--blue);
 }
 
 .overline{
@@ -40,15 +45,13 @@
   outline-color: white;
   padding: 10px;
   border-radius: 20px;
-  color: #e74c3c;
   gap: 20px;
   padding-left: 20px;
 }
 
 html{
-  background-color: #ee8277;
+  background-color: var(--red);
   margin: 20px;
-  
 }
 
 body{
@@ -64,7 +67,8 @@ text{
   font-size: 16px;
 }
 
-.highlighted{
-  background-color: yellow;
+::selection{
   color: black;
+  background-color: var(--green);
+  border-radius: 20px;
 }
