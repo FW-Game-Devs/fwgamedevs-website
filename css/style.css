@@ -1,0 +1,45 @@
+.banner{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  outline-style: solid;
+  outline-color: white;
+  border-radius: 20px;
+}
+
+.padded{
+  margin: 20px;
+  padding: 20px;
+  outline-style: solid;
+  outline-color: white;
+  border-radius: 20px;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.flag-color{
+  color: #fdedec;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+html{
+  background-color: #e74c3c;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+body{
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+text{
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+}
