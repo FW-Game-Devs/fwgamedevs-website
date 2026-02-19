@@ -19,16 +19,33 @@
   display: inline-block;
 }
 
-.flag-color{
+.inline-link{
   color: #fdedec;
   text-decoration-line: underline;
   text-decoration-style: wavy;
 }
 
+.red-text{
+  color: #e74c3c;
+}
+
+.overline{
+  text-decoration-line: overline underline;
+}
+
+#tab-bar{
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  color: #e74c3c;
+  gap: 20px;
+  padding-left: 20px;
+}
+
 html{
   background-color: #e74c3c;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px;
 }
 
 body{
