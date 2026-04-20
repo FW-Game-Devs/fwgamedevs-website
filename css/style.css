@@ -11,13 +11,27 @@
   border-radius: 20px;
 }
 
+.borderless{
+  outline-style: none;
+}
+
 .padded{
+  display: flow-root;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
   outline-style: solid;
   outline-color: white;
   border-radius: 20px;
+}
+
+.row{
+  display: flex;
+  gap: 10px;
+}
+
+.vertCenter{
+  align-items: center;
 }
 
 .inline-block{
@@ -35,6 +49,18 @@
 
 .overline{
   text-decoration-line: overline underline;
+}
+
+.floatLeft{
+  float: left;
+}
+
+.floatRight{
+  float: right;
+}
+
+.margined{
+  margin: 20px;
 }
 
 #tab-bar{
@@ -65,6 +91,22 @@ text{
   color: white;
   font-family: sans-serif;
   font-size: 16px;
+}
+
+.title{
+  color: white;
+  font-size: 30px;
+  font-family: 'DogicaPixelRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sub-title{
+  color: white;
+  font-size: 14px;
+  font-family: 'DogicaPixelRegular';
+  font-weight: normal;
+  font-style: normal;
 }
 
 ::selection{
