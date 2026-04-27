@@ -1,4 +1,7 @@
-@import url('https://fontlibrary.org/face/dogica');
+@font-face{
+  font-family: 'Dogica';
+  src: url('/fonts/dogica.otf');
+}
 
 :root{
   --blue: #0151ca;
@@ -98,7 +101,7 @@ text{
 .title{
   color: white;
   font-size: 30px;
-  font-family: 'DogicaPixelRegular';
+  font-family: 'Dogica', sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -106,7 +109,7 @@ text{
 .sub-title{
   color: white;
   font-size: 14px;
-  font-family: 'DogicaPixelRegular';
+  font-family: 'Dogica', sans-serif;
   font-weight: normal;
   font-style: normal;
 }
