@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Fort Wayne Game Devs</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io/site.webmanifest">
+
+    <script>
+        
+        async function loadGames() {
+            const res = await fetch('./data/gamesinfo.json');
+            const games = await res.json();
+
+            const grid = document.getElementById('games-grid');
+
+            games.forEach(game => {
+
+                const media = game.shouldDisplayVideo
+                    ? `<iframe class="h-48 w-full rounded-xl object-cover"
+                        src="${game.videoSrc}"
+                        frameborder="0"
+                        allowfullscreen></iframe>`
+                    : `<img src="${game.imageSrc}"
+                        class="h-48 w-full rounded-xl object-cover" />`;
+
+                const links = (game.links || [])
+                    .map(link => `<a href="${link.url}" class="text-blue-600 hover:underline" target="_blank">${link.label}</a>`)
+                    .join('<br>');
+
+                const card = `
+                    <div class="flex gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+
+                        <!-- Media -->
+                        <div class="w-1/2 overflow-hidden rounded-xl">
+                            ${media}
+                        </div>
+
+                        <!-- Info -->
+                        <div class="w-1/2">
+
+                            <h3 class="text-lg font-bold">
+                                ${game.title}
+                            </h3>
+
+                            <p class="mt-2 text-sm text-gray-700">
+                                ${game.description}
+                            </p>
+
+                            <div class="mt-3 text-sm text-gray-600">
+                                ${links}
+                            </div>
+
+                        </div>
+                    </div>
+                `;
+
+                grid.innerHTML += card;
+            });
+        }
+
+        async function loadSpeakers() {
+
+            const res = await fetch('./data/speakers.json');
+            const speakers = await res.json();
+
+            const grid = document.getElementById('speakers-grid');
+
+            speakers.forEach((speaker, index) => {
+
+                const links = speaker.links.map(link => `
+                    <a
+                        href="${link.url}"
+                        target="_blank"
+                        class="text-sm text-blue-400 hover:text-red-300"
+                    >
+                        ${link.label}
+                    </a>
+                `).join(' | ');
+
+                const card = `
+                    <div
+                        class="speaker-card border-white/10  p-5 transition hover:border-red-500 hover:shadow-xl hover:bg-white/20"
+                        data-index="${index}"
+                    >
+
+                         <img
+                            src="${speaker.imageSrc}"
+                            class="mx-auto h-40 w-40 rounded-full object-cover"
+                        > 
+
+                        
+                        <div class="mt-4 text-center">
+
+                            <h3 class="text-2xl font-bold">
+                                ${speaker.name}
+                            </h3>
+
+                            <p class="mt-1 text-gray-400">
+                                ${speaker.title}
+                            </p>
+
+                            <div class="mt-3">
+                                ${links}
+                            </div>
+
+                            <button
+                                class="mt-2 rounded-xl border border-red-600 px-4 py-2 font-semibold text-red-600 transition hover:bg-red-500 hover:text-white"
+                            >
+                                View Session
+                            </button>
+
+                        </div>
+                    </div>
+                `;
+
+                grid.innerHTML += card;
+            });
+
+            setupSpeakerModal(speakers);
+        }
+
+        function setupSpeakerModal(speakers) {
+
+           const cards = document.querySelectorAll('.speaker-card');
+
+            cards.forEach(card => {
+
+                card.addEventListener('click', () => {
+
+                    const speaker = speakers[card.dataset.index];
+
+                    document.getElementById('speaker-modal-content').innerHTML = `
+
+                        <div class="space-y-6">
+
+                            <!-- Talk Title -->
+                            <div>
+
+                                <h2 class="text-4xl font-bold leading-tight text-white">
+                                    ${speaker.sessionTitle}
+                                </h2>
+
+                                <p class="mt-3 text-lg text-red-400">
+                                    Time: ${speaker.sessionTime}
+                                </p>
+
+                            </div>
+
+                            <!-- Speaker -->
+                            <div>
+
+                                
+
+                                <p class="mt-2 text-gray-300">
+                                    <span class="text-xl font-semibold text-white">
+                                        Speaker:
+                                    </span>
+                                    ${speaker.name} (${speaker.title})
+                                </p>
+
+                            </div>
+
+                            <!-- Description -->
+                            <div>
+
+                                <h3 class="text-xl font-semibold text-white">
+                                    Description
+                                </h3>
+
+                                <p class="mt-2 leading-relaxed text-gray-300">
+                                    ${speaker.sessionDescription}
+                                </p>
+
+                            </div>
+
+                            <!-- Intended Audience -->
+                            <div>
+
+                                <h3 class="text-xl font-semibold text-white">
+                                    Intended Audience
+                                </h3>
+
+                                <p class="mt-2 text-gray-300">
+                                    ${speaker.intendedAudience}
+                                </p>
+
+                            </div>
+
+                        </div>
+                    `;
+
+                    const modal = document.getElementById('speaker-modal');
+
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                });
+            });
+            document
+                .getElementById('close-speaker-modal')
+                .addEventListener('click', () => {
+
+                    const modal = document.getElementById('speaker-modal');
+
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                });
+        }
+
+        
+        loadSpeakers();
+        loadGames();
+    </script>
+</head>
+
+<body class="bg-[#FFFFFF] text-white min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 border-b border-gray-800 bg-[#000000] backdrop-blur">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-1">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-5">
+                <img 
+                    src="./images/fortcade-logo.png" 
+                    alt="Fort Wayne Game Devs Logo"
+                    class="h-16 w-20 object-contain"
+                >
+
+                <span class="hidden text-xl font-bold md:block">
+                    Fort Wayne Game Devs
+                </span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden items-center gap-8 md:flex">
+                <a href="#Banner" class="transition hover:text-blue-400">Home</a>
+                <a href="#About" class="transition hover:text-blue-400">About</a>
+                <a href="#Speakers" class="transition hover:text-blue-400">Talks</a>
+                <a href="#Showcase" class="transition hover:text-blue-400">Showcase</a>
+
+                <a 
+                    href="#"
+                    class="rounded-lg bg-blue-600 px-4 py-2 font-medium transition hover:bg-blue-500"
+                >
+                    Join Us
+                </a>
+            </div>
+
+            <!-- Mobile Button -->
+            <button 
+                id="mobile-menu-button"
+                class="md:hidden"
+                aria-label="Toggle Menu"
+            >
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path 
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div 
+            id="mobile-menu"
+            class="hidden border-t border-gray-800 bg-gray-900 md:hidden"
+        >
+            <div class="flex flex-col space-y-4 px-6 py-4">
+                <a href="#Banner" class="hover:text-blue-400">Home</a>
+                <a href="#About" class="hover:text-blue-400">About</a>
+                <a href="#Speakers" class="hover:text-blue-400">Talks</a>
+                <a href="#Showcase" class="hover:text-blue-400">Showcase</a>
+
+                <a 
+                    href="#"
+                    class="rounded-lg bg-blue-600 px-4 py-2 text-center font-medium hover:bg-blue-500"
+                >
+                    Join Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page content -->
+    <main class="flex-1">
+        
+        <!-- Hero Banner -->
+        <section class="relative flex min-h-[100vh] w-full items-center justify-center overflow-hidden" id="Banner">
+
+            <!-- Background Video -->
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="absolute inset-0 h-full w-full object-cover  scale-110"
+            >
+                <source src="./videos/placeholder_banner.mp4" type="video/mp4">
+            </video>
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <!-- Center Card -->
+            <div class="relative z-10 mx-6 w-full max-w-150 rounded-sm border border-white/10 bg-blue-950/20 p-5 shadow-2xl backdrop-blur-sm">
+
+                <div class="flex flex-col items-center gap-6 md:flex-row">
+
+                    <!-- Left Image -->
+                    <div class="h-72 w-full overflow-hidden rounded- md:h-auto md:w-80 md:self-stretch">
+
+                        <img
+                            src="./images/forum-stadium.jpg"
+                            alt="Fort Cade 2026"
+                            class="h-full w-full object-cover shadow-lg"
+                        >
+
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="text-center md:w-2/3 md:text-left">
+
+                        <p class="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-blue-300">
+                            Join Us on <span class="text-red-300 font-bold">June 13th</span>
+                        </p>
+
+                        <h1 class="text-3xl font-bold text-white md:text-4xl">
+                            Fort Cade 2026
+                        </h1>
+
+                        <div class="mt-4 space-y-1 text-sm text-gray-200 md:text-base">
+
+                            <p>  12PM – 5PM EST / 9AM – 2PM PT / 5PM – 10PM GMT</p>
+
+                            <p>Downtown Allen County Public Library</p>
+
+                            <p>900 Library Plaza, Fort Wayne, IN 46802</p>
+
+                            <p>Meeting Rooms A, B, C</p>
+
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+
+                            <a
+                                href="#"
+                                class="rounded-xl bg-blue-600 px-4 py-2 text-center text-sm font-semibold transition hover:bg-blue-500"
+                            >
+                                Learn More
+                            </a>
+
+                            <a
+                                href="#"
+                                class="rounded-xl border border-white/20 px-4 py-2 text-center text-sm font-semibold text-white transition hover:border-white"
+                            >
+                                Join Community
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- About Section -->
+        <section class="bg-white px-6 py-16 text-black" id="About">
+
+            <div class="mx-auto max-w-6xl">
+
+                
+
+                <!-- Video + Text Row -->
+                <div class="flex flex-col items-center gap-10 md:flex-row">
+
+                    <!-- Video -->
+                    <div class="w-full overflow-hidden rounded-20 border border-gray-200 md:w-1/2">
+                        <video
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            class="h-72 w-full object-cover md:h-full md:min-h-[350px]"
+                        >
+                            <source src="./videos/placeholder_game_reels.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="w-full md:w-1/2">
+
+                        <!-- Title -->
+                        <h2 class="mb-6 text-2xl font-bold text-red-600 md:text-4xl md:leading-tight">
+                            Did you know that people in Fort Wayne make games?
+                        </h2>
+
+                        <!-- Paragraph -->
+                        <p class="text-lg leading-relaxed text-gray-800 md:text-xl">
+                            Come out to Fort Cade to meet these people and play their games. Fort Cade is open June 13th from Noon to 5pm at the Downtown Allen County Public Library.
+                            Whether you make games yourself, are interested in getting started in game development, or just like playing games; we’d love to see you at Fort Cade!
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Cards -->
+                <div class="mt-14 grid gap-6 md:grid-cols-3">
+
+                    <!-- Card 1 -->
+                    <div>
+                        <div class="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+
+                            <img src="./images/forum-stadium.jpg"
+                                class="h-64 w-full object-cover transition duration-300 group-hover:scale-105">
+
+                            <div class="absolute inset-0 bg-black/0 transition group-hover:bg-black/40"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white opacity-0 transition group-hover:opacity-100">
+                                <h3 class="text-lg font-bold">Meeting Rooms A & B</h3>
+                                <p class="mt-2 text-sm">
+                                    Developers showcase games and collect stamps for the raffle.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="mt-3 text-center font-semibold">
+                            Show off your Games
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div>
+                        <div class="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+
+                            <img src="./images/meetup_group.jpg"
+                                class="h-64 w-full object-cover transition duration-300 group-hover:scale-105">
+
+                            <div class="absolute inset-0 bg-black/0 transition group-hover:bg-black/40"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white opacity-0 transition group-hover:opacity-100">
+                                <h3 class="text-lg font-bold">Meeting Room C</h3>
+                                <p class="mt-2 text-sm">
+                                    Talks on game dev, accessibility, and education using games.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="mt-3 text-center font-semibold">
+                            Game Dev Talks
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div>
+                        <div class="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+
+                            <img src="./images/meetup_group.jpg"
+                                class="h-64 w-full object-cover transition duration-300 group-hover:scale-105">
+
+                            <div class="absolute inset-0 bg-black/0 transition group-hover:bg-black/40"></div>
+
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white opacity-0 transition group-hover:opacity-100">
+                                <h3 class="text-lg font-bold">Stamp Rally</h3>
+                                <p class="mt-2 text-sm">
+                                    Visit tables, collect stamps, and enter the prize raffle.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="mt-3 text-center font-semibold">
+                            Stamp Rally
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers Section -->
+        <section class="bg-black px-6 py-16 text-white" id="Speakers">
+
+            <div class="mx-auto max-w-6xl">
+
+                <!-- Title -->
+                <h2 class="mb-12 text-left text-4xl font-bold">
+                    Featured Speakers
+                </h2>
+
+                <!-- Grid -->
+                <div
+                    id="speakers-grid"
+                    class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+                ></div>
+
+            </div>
+        </section>
+        <!-- Speaker Modal -->
+        <div
+            id="speaker-modal"
+            class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-10"
+        >
+
+            <div class="relative w-full max-w-4xl rounded-sm bg-zinc-900 p-6 text-white shadow-2xl">
+
+                <!-- Close -->
+                <button
+                    id="close-speaker-modal"
+                    class="absolute right-4 top-4 text-3xl text-gray-400 hover:text-white"
+                >
+                    ×
+                </button>
+
+                <!-- Dynamic Content -->
+                <div id="speaker-modal-content"></div>
+
+            </div>
+        </div>
+
+
+        <!-- Games Section -->
+        <section class="bg-white px-6 py-16 text-black" id="Showcase">
+
+            <div class="mx-auto max-w-6xl">
+
+                <h2 class="mb-10 text-3xl font-bold">
+                    Featured Games
+                </h2>
+
+                <!-- Grid -->
+                <div id="games-grid" class="grid gap-6 md:grid-cols-2"></div>
+
+            </div>
+        </section>
+        
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-[#2A4488] bg-gray-900">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-8 md:flex-row">
+
+            <!-- Footer Title -->
+            <div class="text-center md:text-left">
+                <h2 class="text-lg font-semibold text-white">
+                    Fort Wayne Game Devs
+                </h2>
+
+                <p class="mt-1 text-sm text-gray-400">
+                    Building games. Growing community.
+                </p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center gap-5">
+
+                <!-- Discord -->
+                <a 
+                    href="#"
+                    aria-label="Discord"
+                    class="text-gray-400 transition hover:text-white"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.317 4.369A19.791 19.791 0 0016.558 3c-.176.322-.379.76-.518 1.104a18.27 18.27 0 00-8.08 0A11.724 11.724 0 007.44 3a19.736 19.736 0 00-3.76 1.369C1.305 7.874.665 11.292.984 14.663a19.9 19.9 0 005.993 3.038c.48-.657.907-1.352 1.27-2.08-.698-.263-1.363-.59-1.986-.977.166-.12.329-.245.487-.373 3.828 1.797 7.977 1.797 11.76 0 .16.128.322.253.488.373-.624.387-1.29.714-1.989.978.364.726.79 1.42 1.27 2.078a19.875 19.875 0 005.995-3.037c.374-3.91-.64-7.298-2.956-10.294z"/>
+                    </svg>
+                </a>
+
+                <!-- GitHub -->
+                <a 
+                    href="#"
+                    aria-label="GitHub"
+                    class="text-gray-400 transition hover:text-white"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.59 2 12.253c0 4.53 2.865 8.37 6.839 9.727.5.094.682-.22.682-.49 0-.24-.009-.875-.014-1.718-2.782.617-3.37-1.37-3.37-1.37-.455-1.18-1.11-1.495-1.11-1.495-.908-.636.069-.623.069-.623 1.004.072 1.532 1.053 1.532 1.053.892 1.57 2.341 1.116 2.91.853.091-.665.35-1.117.636-1.374-2.22-.258-4.555-1.14-4.555-5.073 0-1.12.39-2.036 1.03-2.754-.103-.26-.447-1.3.098-2.71 0 0 .84-.276 2.75 1.052A9.303 9.303 0 0112 6.844c.85.004 1.705.118 2.504.347 1.909-1.328 2.748-1.052 2.748-1.052.546 1.41.202 2.45.1 2.71.64.718 1.028 1.634 1.028 2.754 0 3.943-2.339 4.812-4.566 5.066.359.318.678.946.678 1.907 0 1.377-.012 2.487-.012 2.827 0 .272.18.588.688.488A10.01 10.01 0 0022 12.253C22 6.59 17.523 2 12 2z"/>
+                    </svg>
+                </a>
+
+                <!-- Twitter / X -->
+                <a 
+                    href="#"
+                    aria-label="Twitter"
+                    class="text-gray-400 transition hover:text-white"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18.244 2H21l-6.56 7.497L22.5 22h-6.828l-5.35-6.987L4.2 22H1.444l7.02-8.02L1.5 2h6.996l4.837 6.35L18.244 2zm-1.197 18h1.885L7.467 3.902H5.443L17.047 20z"/>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800 py-4 text-center text-sm text-gray-500">
+            © 2026 Fort Wayne Game Devs. All rights reserved. Site by Excell Pepple
+        </div>
+    </footer>
+
+
+    <script>
+        const button = document.getElementById("mobile-menu-button");
+        const menu = document.getElementById("mobile-menu");
+
+        button.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>

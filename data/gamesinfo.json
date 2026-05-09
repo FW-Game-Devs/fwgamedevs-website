@@ -1,0 +1,153 @@
+[
+  {
+    "title": "Bound Together by Justin D Wilder",
+    "description": "A roguelike deck building game with card combinations and card crafting. Help Stitch, our crochet doll hero, as they battle their way through various foes throughout the attic.",
+    "imageSrc": "./images/bound_together.jpg",
+    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/xxxx",
+        "label": "Steam Page"
+      },
+      {
+        "url": "https://itch.io/xxxx",
+        "label": "ItchIO"
+      }
+    ]
+  },
+
+  {
+    "title": "Neon Drift",
+    "description": "Race through futuristic highways while dodging hazards and chaining boosts to achieve the highest score possible.",
+    "imageSrc": "./images/neon_drift.jpg",
+    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
+    "shouldDisplayVideo": true,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/neondrift",
+        "label": "Steam"
+      }
+    ]
+  },
+
+  {
+    "title": "Dungeon Relics",
+    "description": "Explore ancient ruins, solve puzzles, and uncover legendary artifacts in this pixel-art dungeon crawler.",
+    "imageSrc": "./images/dungeon_relics.jpg",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://itch.io/dungeonrelics",
+        "label": "Itch.io"
+      }
+    ]
+  },
+
+  {
+    "title": "Sky Frontier",
+    "description": "Build and customize your own airship while exploring floating islands filled with danger and treasure.",
+    "imageSrc": "./images/sky_frontier.jpg",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://example.com",
+        "label": "Official Site"
+      }
+    ]
+  },
+
+  {
+    "title": "Echoes Below",
+    "description": "A narrative horror experience set deep underground where every choice changes the fate of the expedition.",
+    "imageSrc": "./images/echoes_below.jpg",
+    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
+    "shouldDisplayVideo": true,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/echoesbelow",
+        "label": "Steam"
+      }
+    ]
+  },
+
+  {
+    "title": "Pixel Brawlers",
+    "description": "Battle your friends locally in chaotic multiplayer arenas packed with weapons, traps, and powerups.",
+    "imageSrc": "./images/pixel_brawlers.jpg",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://itch.io/pixelbrawlers",
+        "label": "Download"
+      }
+    ]
+  },
+
+  {
+    "title": "Harvest Moonlight",
+    "description": "Relax and rebuild a forgotten countryside village while farming, fishing, and befriending townsfolk.",
+    "imageSrc": "./images/harvest_moonlight.jpg",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://example.com",
+        "label": "Website"
+      }
+    ]
+  },
+
+  {
+    "title": "Circuit Break",
+    "description": "Hack security systems and outsmart robotic enemies in this fast-paced cyberpunk stealth game.",
+    "imageSrc": "./images/circuit_break.jpg",
+    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
+    "shouldDisplayVideo": true,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/circuitbreak",
+        "label": "Steam"
+      },
+      {
+        "url": "https://discord.gg/example",
+        "label": "Discord"
+      }
+    ]
+  },
+
+  {
+    "title": "Wildwood Tactics",
+    "description": "Lead a squad of woodland creatures in strategic turn-based battles against invading machines.",
+    "imageSrc": "./images/wildwood_tactics.jpg",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://example.com",
+        "label": "Learn More"
+      }
+    ]
+  },
+
+  {
+    "title": "Starfall Arena",
+    "description": "Compete in high-speed arena battles using customizable ships and powerful abilities.",
+    "imageSrc": "./images/starfall_arena.jpg",
+    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
+    "shouldDisplayVideo": true,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/starfallarena",
+        "label": "Steam"
+      },
+      {
+        "url": "https://youtube.com",
+        "label": "Trailer"
+      }
+    ]
+  }
+]
