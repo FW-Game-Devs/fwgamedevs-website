@@ -101,11 +101,11 @@
                         <div class="mt-4 text-center">
 
                             <h3 class="text-2xl font-bold">
-                                ${speaker.name}
+                                ${speaker.sessionTitle}
                             </h3>
 
                             <p class="mt-1 text-gray-400">
-                                ${speaker.title}
+                                ${speaker.name + " - " + speaker.title}
                             </p>
                             <p class="mt-1 text-red-400">
                                 ${speaker.sessionTime}
@@ -239,16 +239,16 @@
                 >
 
                 <span class="hidden text-xl font-bold md:block">
-                    Fort Wayne Game Devs
+                    Fort Cade  |  Games Showcase
                 </span>
             </a>
 
             <!-- Desktop Menu -->
             <div class="hidden items-center gap-8 md:flex">
                 <a href="#Banner" class="transition hover:text-blue-400">Home</a>
-                <a href="#Footer" class="transition hover:text-blue-400">About</a>
                 <a href="#Speakers" class="transition hover:text-blue-400">Talks</a>
                 <a href="#Showcase" class="transition hover:text-blue-400">Showcase</a>
+                <a href="#Footer" class="transition hover:text-blue-400">About Us</a>
                 <a 
                     href="https://luma.com/oa06zfpv"
                     target="_blank" rel="noopener noreferrer"
@@ -288,12 +288,9 @@
         >
             <div class="flex flex-col space-y-4 px-6 py-4">
                 <a href="#Banner" class="hover:text-blue-400">Home</a>
-                <a href="#Footer" class="hover:text-blue-400">About</a>
                 <a href="#Speakers" class="hover:text-blue-400">Talks</a>
                 <a href="#Showcase" class="hover:text-blue-400">Showcase</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWCgDAjnG8re1qhS9PEQQrbAzqu0oh1nay3XREM9LrmCAPfA/viewform" 
-                                target="_blank" rel="noopener noreferrer" class="text-red-400 hover:text-red-600"
-                >Submit A Game</a>
+                <a href="#Footer" class="hover:text-blue-400">About Us</a>
                 <a 
                     href="https://luma.com/oa06zfpv"
                     target="_blank" rel="noopener noreferrer"
@@ -334,9 +331,9 @@
                     <div class="h-72 w-full overflow-hidden rounded- md:h-auto md:w-80 md:self-stretch">
 
                         <img
-                            src="./images/forum-stadium.jpg"
+                            src="./images/fortcade-logo.png"
                             alt="Fort Cade 2026"
-                            class="h-full w-full object-cover shadow-lg"
+                            class="h-full w-full object-contain shadow-lg"
                         >
 
                     </div>
@@ -513,7 +510,7 @@
 
                 <!-- Title -->
                 <h2 class="mb-12 text-left text-4xl font-bold">
-                    Featured Speakers
+                    Talk Schedule
                 </h2>
 
                 <!-- Grid -->
