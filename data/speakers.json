@@ -23,9 +23,9 @@
     "name": "Nick Curto",
     "title": "Accessibility Engineer at Filament Games",
     "imageSrc": "./images/Excell_PFP_BW.png",
-    "sessionTitle": "2:00 PM - Making Accessible Games for Screen Readers and WCAG",
+    "sessionTitle": "Making Accessible Games for Screen Readers and WCAG",
     "sessionDescription": "Learn how modern games can become more accessible to players using screen readers and assistive technologies. Nick Curto shares practical industry experience from working on educational games at Filament Games and explains how developers can begin implementing accessibility standards into their own projects.",
-    "sessionTime": "12:30 PM",
+    "sessionTime": "2:00 PM",
     "intendedAudience": "Aspiring developers, students, hobbyists, and anyone interested in indie game development.",
     "links": [
       {
@@ -39,9 +39,9 @@
     "name": "Scott Hill",
     "title": "Writer & Solo RPG Designer",
     "imageSrc": "./images/Excell_PFP_BW.png",
-    "sessionTitle": "3:30 PM - The Imitation Game: The Art and Mechanics of World Building in Solo RPGs",
+    "sessionTitle": "The Imitation Game: The Art and Mechanics of World Building in Solo RPGs",
     "sessionDescription": "Explore how solo RPGs combine lightweight mechanics with deep storytelling possibilities. This session examines how creative nonfiction, personal experiences, and imagination can inspire compelling game worlds and player-driven narratives.",
-    "sessionTime": "12:30 PM",
+    "sessionTime": "3:30 PM",
     "intendedAudience": "Aspiring developers, students, hobbyists, and anyone interested in indie game development.",
     "links": [
       {
