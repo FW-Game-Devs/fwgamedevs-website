@@ -2,8 +2,8 @@
   {
     "title": "Bound Together by Justin D Wilder",
     "description": "A roguelike deck building game with card combinations and card crafting. Help Stitch, our crochet doll hero, as they battle their way through various foes throughout the attic.",
-    "imageSrc": "./images/bound_together.jpg",
-    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
+    "imageSrc": "./images/BoundTogether.png",
+    "videoSrc": "",
     "shouldDisplayVideo": false,
     "links": [
       {
@@ -11,143 +11,210 @@
         "label": "Steam Page"
       },
       {
-        "url": "https://itch.io/xxxx",
+        "url": "https://justinwilder.itch.io/bound-together",
         "label": "ItchIO"
       }
     ]
   },
 
   {
-    "title": "Neon Drift",
-    "description": "Race through futuristic highways while dodging hazards and chaining boosts to achieve the highest score possible.",
-    "imageSrc": "./images/neon_drift.jpg",
-    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
-    "shouldDisplayVideo": true,
-    "links": [
-      {
-        "url": "https://store.steampowered.com/app/neondrift",
-        "label": "Steam"
-      }
-    ]
-  },
-
-  {
-    "title": "Dungeon Relics",
-    "description": "Explore ancient ruins, solve puzzles, and uncover legendary artifacts in this pixel-art dungeon crawler.",
-    "imageSrc": "./images/dungeon_relics.jpg",
-    "videoSrc": "",
+    "title": "cloud uprising by loungegames",
+    "description": "A precision platformer centered around endless bouncing across single-use platforms, similar to Doodle Jump but actually inspired by a WarioWare microgame. It has an entirely hand-drawn aesthetic, and a story about weather control, as a metaphor for the free and open internet.",
+    "imageSrc": "./images/CloudUprising.png",
+    "videoSrc": "https://www.youtube.com/embed/M9KLAyRFuO4?si=8qGdmXhebOPGzDmS",
     "shouldDisplayVideo": false,
     "links": [
       {
-        "url": "https://itch.io/dungeonrelics",
-        "label": "Itch.io"
-      }
-    ]
-  },
-
-  {
-    "title": "Sky Frontier",
-    "description": "Build and customize your own airship while exploring floating islands filled with danger and treasure.",
-    "imageSrc": "./images/sky_frontier.jpg",
-    "videoSrc": "",
-    "shouldDisplayVideo": false,
-    "links": [
-      {
-        "url": "https://example.com",
-        "label": "Official Site"
-      }
-    ]
-  },
-
-  {
-    "title": "Echoes Below",
-    "description": "A narrative horror experience set deep underground where every choice changes the fate of the expedition.",
-    "imageSrc": "./images/echoes_below.jpg",
-    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
-    "shouldDisplayVideo": true,
-    "links": [
-      {
-        "url": "https://store.steampowered.com/app/echoesbelow",
-        "label": "Steam"
-      }
-    ]
-  },
-
-  {
-    "title": "Pixel Brawlers",
-    "description": "Battle your friends locally in chaotic multiplayer arenas packed with weapons, traps, and powerups.",
-    "imageSrc": "./images/pixel_brawlers.jpg",
-    "videoSrc": "",
-    "shouldDisplayVideo": false,
-    "links": [
-      {
-        "url": "https://itch.io/pixelbrawlers",
-        "label": "Download"
-      }
-    ]
-  },
-
-  {
-    "title": "Harvest Moonlight",
-    "description": "Relax and rebuild a forgotten countryside village while farming, fishing, and befriending townsfolk.",
-    "imageSrc": "./images/harvest_moonlight.jpg",
-    "videoSrc": "",
-    "shouldDisplayVideo": false,
-    "links": [
-      {
-        "url": "https://example.com",
+        "url": "https://loungegames.neocities.org",
         "label": "Website"
       }
     ]
   },
 
   {
-    "title": "Circuit Break",
-    "description": "Hack security systems and outsmart robotic enemies in this fast-paced cyberpunk stealth game.",
-    "imageSrc": "./images/circuit_break.jpg",
-    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
-    "shouldDisplayVideo": true,
+    "title": "Destruction of Heavenly Bliss by Alexander Stocking-Araujo",
+    "description": "An old school shoot 'em up with roguelite/incremental mechanics. Grow from a fragile ship to a machine of destruction.",
+    "imageSrc": "./images/HeavenlyBliss.jpg",
+    "videoSrc": "https://www.youtube.com/embed/i0p1IycpfBw?si=TY16iC3ntFTKxiFN",
+    "shouldDisplayVideo": false,
     "links": [
       {
-        "url": "https://store.steampowered.com/app/circuitbreak",
+        "url": "https://store.steampowered.com/app/4160930/Destruction_of_Heavenly_Bliss/",
         "label": "Steam"
-      },
-      {
-        "url": "https://discord.gg/example",
-        "label": "Discord"
       }
     ]
   },
 
   {
-    "title": "Wildwood Tactics",
-    "description": "Lead a squad of woodland creatures in strategic turn-based battles against invading machines.",
-    "imageSrc": "./images/wildwood_tactics.jpg",
+    "title": "Dream Domain by Garden Hermit Games",
+    "description": "Build and customize your own airship while exploring floating islands filled with danger and treasure.",
+    "imageSrc": "./images/DreamDomain.jpg",
     "videoSrc": "",
     "shouldDisplayVideo": false,
     "links": [
       {
-        "url": "https://example.com",
-        "label": "Learn More"
+        "url": "https://trashwizz.itch.io/super-dream-domain",
+        "label": "ItchIO"
       }
     ]
   },
 
   {
-    "title": "Starfall Arena",
-    "description": "Compete in high-speed arena battles using customizable ships and powerful abilities.",
-    "imageSrc": "./images/starfall_arena.jpg",
-    "videoSrc": "https://www.youtube.com/embed/XXXXXXX",
-    "shouldDisplayVideo": true,
+    "title": "Dream Runner by Glass Arcade",
+    "description": "Precision platformer with a heartwarming story about 2 best friends and a wide variety in gameplay! Divided into 3 game mode options for what kind of player you are: Adventure Mode (Linear Story) / Dream Mode (Roguelike progression) / Nightmare Mode (Kaizo-like precision & challenge levels)",
+    "imageSrc": "./images/DreamRunner.jpg",
+    "videoSrc": "https://www.youtube.com/embed/LeK4GrAqWGU?si=qMoOXn5BACNztDCT",
+    "shouldDisplayVideo": false,
     "links": [
       {
-        "url": "https://store.steampowered.com/app/starfallarena",
+        "url": "https://store.steampowered.com/app/3035870/Dream_Runner/",
+        "label": "Steam"
+      }
+    ]
+  },
+
+  {
+    "title": "DUNJUNGUY by Aga Pito Studios",
+    "description": "DUNJUNGUY is a procedurally generated action RPG dungeon-crawler with Rogue-like elements. Following brave adventurers on their journey into the DUNJUN players will find bizarre unique items, epic loot, and pets that buff the player's abilities and enable them to fight off the endless hordes of creatures.",
+    "imageSrc": "./images/Dunjunguy.png",
+    "videoSrc": "https://www.youtube.com/embed/QIAFNDdE0wQ?si=2_lM2iOiyyu2Bw54",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/2273110/DUNJUNGUY/",
+        "label": "Steam"
+      }
+    ]
+  },
+
+  {
+    "title": "EchoBlade by Sunset Arctic Games",
+    "description": "EchoBlade is a puzzle-combat dungeon explorer. You find yourself blind and trapped inside an expansive tower labyrinth. Shrouded in total darkness you must navigate your way to freedom using only sound as your guide.",
+    "imageSrc": "./images/EchoBlade.jpg",
+    "videoSrc": "https://www.youtube.com/embed/P3Bj-EJkRh4?si=Hf0hbYaBTp3-YYv6",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/1422570/EchoBlade/",
+        "label": "Steam"
+      }
+    ]
+  },
+
+  {
+    "title": "Extreme Auto Fishing by ",
+    "description": "A Playdate fishing auto shooter.",
+    "imageSrc": "./images/AutoFishing.png",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://cxsquared.itch.io/extreme-auto-fishing",
+        "label": "ItchIO"
+      }
+    ]
+  },
+
+  {
+    "title": "Maxai by Dark Butter Studios",
+    "description": "A competitive living card game where fighting game speed meets RPG depth. Create powerful deck builds, adapt your strategy, and outfight your opponent in dynamic PvP battles.",
+    "imageSrc": "./images/wildwood_tactics.jpg",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+    ]
+  },
+
+  {
+    "title": "PHANTOM CHAINS by GoolWorks",
+    "description": "Compete in high-speed arena battles using customizable ships and powerful abilities.",
+    "imageSrc": "./images/PhantomChains.jpg",
+    "videoSrc": "https://www.youtube.com/embed/wmjlHgh_okg?si=VF1Bn_rz7YB-HHCX",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/2339890/Phantom_Chains/",
         "label": "Steam"
       },
       {
-        "url": "https://youtube.com",
+        "url": "https://www.youtube.com/watch?v=wmjlHgh_okg",
         "label": "Trailer"
       }
     ]
+  },
+
+  {
+    "title": "Project Pollen by Through Lidless Eye",
+    "description": "A 2D platformer with a clay art-style.",
+    "imageSrc": "./images/ProjectPollen.jpg",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://throughlidlesseye.itch.io/projectpollen",
+        "label": "ItchIO"
+      }
+    ]
+  },
+
+  {
+    "title": "Speedy Golf by Off The Deck Games",
+    "description": "A 2D platformer with a clay art-style.",
+    "imageSrc": "./images/SpeedyGolf.png",
+    "videoSrc": "https://www.youtube.com/embed/VkJUup-J0MQ?si=cYvgOxmChKCAPTYi",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://offthedeck.itch.io/speedygolf",
+        "label": "ItchIO"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=VkJUup-J0MQ",
+        "label": "Trailer"
+      }
+    ]
+  },
+
+  {
+    "title": "SportsStrikers by Sunset Arctic Games",
+    "description": "A 2D platformer with a clay art-style.",
+    "imageSrc": "./images/SunsetArctic.png",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://www.sunsetarcticgames.com",
+        "label": "Website"
+      }
+    ]
+  },
+
+  {
+    "title": "String Game by Spiritsong Games",
+    "description": "2 player asym game with twine as the input.",
+    "imageSrc": "./images/TravisFaas.jpg",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://www.travisfaas.com",
+        "label": "Website"
+      }
+    ]
+  },
+
+  {
+    "title": "Andrew Groot by Spiritsong Games",
+    "description": "2 player asym game with twine as the input.",
+    "imageSrc": "./images/BoundaryCondition.jpg",
+    "videoSrc": "https://www.youtube.com/embed/-UwRLXniXls?si=A0cQD2_PuFk2y__u?autoplay=1&mute=1",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/3458520/The_Boundary_Condition_Demo/",
+        "label": "Steam"
+      }
+    ]
   }
+
 ]
