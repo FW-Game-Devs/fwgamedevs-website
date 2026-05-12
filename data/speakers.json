@@ -3,18 +3,22 @@
     "name": "Excell Pepple",
     "title": "Technical Game Designer",
     "imageSrc": "./images/Excell_PFP_BW.png",
-    "sessionTitle": "The Indie Revolution: Your Future is Yours",
+    "sessionTitle": "Embracing The Indie Mindset",
     "sessionDescription": "Learn the ins and outs of what it takes to become a game developer in today's rapidly evolving industry. This session explores indie development, self-publishing, building your portfolio, networking, and how aspiring developers can take meaningful next steps toward a career in games.",
     "sessionTime": "12:30 PM",
     "intendedAudience": "Aspiring developers, students, hobbyists, and anyone interested in indie game development.",
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://linkedin.com"
+        "url": "https://www.linkedin.com/in/excell-pepple"
       },
       {
         "label": "Website",
-        "url": "https://example.com"
+        "url": "https://excellpepple.wixsite.com/portfolio"
+      },
+      {
+        "label": "Journal",
+        "url": "https://excellpepple.notion.site/Excell-s-Technical-Journal-31b662d5f73580c1bbabc44a63a663c4"
       }
     ]
   },
@@ -38,7 +42,7 @@
   {
     "name": "Scott Hill",
     "title": "Writer & Solo RPG Designer",
-    "imageSrc": "./images/Excell_PFP_BW.png",
+    "imageSrc": "./images/placeholder.png",
     "sessionTitle": "The Imitation Game: The Art and Mechanics of World Building in Solo RPGs",
     "sessionDescription": "Explore how solo RPGs combine lightweight mechanics with deep storytelling possibilities. This session examines how creative nonfiction, personal experiences, and imagination can inspire compelling game worlds and player-driven narratives.",
     "sessionTime": "3:30 PM",
