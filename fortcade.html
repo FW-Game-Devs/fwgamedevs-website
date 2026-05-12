@@ -246,7 +246,7 @@
             <!-- Desktop Menu -->
             <div class="hidden items-center gap-8 md:flex">
                 <a href="#Banner" class="transition hover:text-blue-400">Home</a>
-                <a href="#About" class="transition hover:text-blue-400">About</a>
+                <a href="#Footer" class="transition hover:text-blue-400">About</a>
                 <a href="#Speakers" class="transition hover:text-blue-400">Talks</a>
                 <a href="#Showcase" class="transition hover:text-blue-400">Showcase</a>
                 <a 
@@ -288,7 +288,7 @@
         >
             <div class="flex flex-col space-y-4 px-6 py-4">
                 <a href="#Banner" class="hover:text-blue-400">Home</a>
-                <a href="#About" class="hover:text-blue-400">About</a>
+                <a href="#Footer" class="hover:text-blue-400">About</a>
                 <a href="#Speakers" class="hover:text-blue-400">Talks</a>
                 <a href="#Showcase" class="hover:text-blue-400">Showcase</a>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWCgDAjnG8re1qhS9PEQQrbAzqu0oh1nay3XREM9LrmCAPfA/viewform" 
@@ -567,27 +567,57 @@
 
 
     <!-- Footer -->
-    <footer class="border-t border-[#2A4488] bg-gray-900">
-        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-8 md:flex-row">
+    <footer class="border-t border-[#2A4488] bg-gray-900" id="Footer">
 
-            <!-- Footer Title -->
-            <div class="text-center md:text-left">
-                <h2 class="text-lg font-semibold text-white">
+        <div class="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-10 lg:flex-row lg:items-center lg:justify-between">
+
+            <!-- Left Content -->
+            <div class="max-w-2xl">
+
+                <h2 class="text-2xl font-bold text-white">
                     Fort Wayne Game Devs
                 </h2>
 
-                <p class="mt-1 text-sm text-gray-400">
+                <p class="mt-3 text-sm leading-relaxed text-gray-400">
                     Building games. Growing community.
+                    This event is organized by Fort Wayne Game Devs.
+                    We're a group of local game developers who host monthly general meetups and weekly coworking sessions.
+                    If you are a developer or are interested in getting started making games, come out to a meetup and join our Discord server!
                 </p>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col gap-3 sm:flex-row">
+
+                <a
+                    href="https://discord.gg/GBmyYdd6Xk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center rounded-xl border border-blue-600 px-6 py-3 text-sm font-semibold text-red-400 transition hover:bg-blue-600 hover:text-white"
+                >
+                    Join Our Discord
+                </a>
+
+                <a
+                    href="https://www.meetup.com/gamedevin/events/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center rounded-xl border border-blue-600 px-6 py-3 text-sm font-semibold text-red-400 transition hover:bg-blue-600 hover:text-white"
+                >
+                    Meetup Sessions
+                </a>
+
             </div>
 
             <!-- Social Links -->
             <div class="flex items-center gap-5">
 
                 <!-- Discord -->
-                <a 
+                <a
                     href="https://discord.gg/GBmyYdd6Xk"
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Discord"
                     class="text-gray-400 transition hover:text-white"
                 >
@@ -597,8 +627,10 @@
                 </a>
 
                 <!-- GitHub -->
-                <a 
+                <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="GitHub"
                     class="text-gray-400 transition hover:text-white"
                 >
@@ -607,9 +639,11 @@
                     </svg>
                 </a>
 
-                <!-- Twitter / X -->
-                <a 
+                <!-- Twitter/X -->
+                <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Twitter"
                     class="text-gray-400 transition hover:text-white"
                 >
@@ -619,12 +653,14 @@
                 </a>
 
             </div>
+
         </div>
 
         <!-- Bottom Bar -->
         <div class="border-t border-gray-800 py-4 text-center text-sm text-gray-500">
             © 2026 Fort Wayne Game Devs. All rights reserved. Site by Excell Pepple
         </div>
+
     </footer>
 
 
