@@ -82,24 +82,6 @@
   },
 
   {
-    "title": "Dream Runner by Glass Arcade",
-    "description": "Precision platformer with a heartwarming story about 2 best friends and a wide variety in gameplay! Divided into 3 game mode options for what kind of player you are: Adventure Mode (Linear Story) / Dream Mode (Roguelike progression) / Nightmare Mode (Kaizo-like precision & challenge levels)",
-    "imageSrc": "./images/DreamRunner.jpg",
-    "videoSrc": "LeK4GrAqWGU",
-    "shouldDisplayVideo": true,
-    "links": [
-      {
-        "url": "https://store.steampowered.com/app/3035870/Dream_Runner/",
-        "label": "Steam"
-      },
-      {
-        "url": "https://www.youtube.com/watch?v=LeK4GrAqWGU",
-        "label": "Trailer"
-      }
-    ]
-  },
-
-  {
     "title": "DUNJUNGUY by Aga Pito Studios",
     "description": "A procedurally generated action RPG dungeon-crawler with Rogue-like elements. Following brave adventurers on their journey into the DUNJUN players will find bizarre unique items, epic loot, and pets that buff the player's abilities and enable them to fight off the endless hordes of creatures.",
     "imageSrc": "./images/Dunjunguy.png",
