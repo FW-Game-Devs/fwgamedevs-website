@@ -16,6 +16,20 @@
       }
     ]
   },
+  
+  {
+    "title": "The Boundary Condition by Andrew Groot",
+    "description": "A 3D/2D/1D puzzle-platformer that explores the physics of cross-sections",
+    "imageSrc": "./images/BoundaryCondition.jpg",
+    "videoSrc": "-UwRLXniXls",
+    "shouldDisplayVideo": true,
+    "links": [
+      {
+        "url": "https://store.steampowered.com/app/3458520/The_Boundary_Condition_Demo/",
+        "label": "Steam"
+      }
+    ]
+  },
 
   {
     "title": "cloud uprising by loungegames",
@@ -114,17 +128,7 @@
       }
     ]
   },
-
-  {
-    "title": "Maxai by Dark Butter Studios",
-    "description": "A competitive living card game where fighting game speed meets RPG depth. Create powerful deck builds, adapt your strategy, and outfight your opponent in dynamic PvP battles.",
-    "imageSrc": "./images/wildwood_tactics.jpg",
-    "videoSrc": "",
-    "shouldDisplayVideo": false,
-    "links": [
-    ]
-  },
-
+    
   {
     "title": "PHANTOM CHAINS by GoolWorks",
     "description": "Compete in high-speed arena battles using customizable ships and powerful abilities.",
@@ -199,20 +203,6 @@
       {
         "url": "https://www.travisfaas.com",
         "label": "Website"
-      }
-    ]
-  },
-
-  {
-    "title": "Andrew Groot by Spiritsong Games",
-    "description": "2 player asym game with twine as the input.",
-    "imageSrc": "./images/BoundaryCondition.jpg",
-    "videoSrc": "-UwRLXniXls",
-    "shouldDisplayVideo": true,
-    "links": [
-      {
-        "url": "https://store.steampowered.com/app/3458520/The_Boundary_Condition_Demo/",
-        "label": "Steam"
       }
     ]
   }
