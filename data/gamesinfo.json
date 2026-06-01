@@ -75,8 +75,8 @@
     "shouldDisplayVideo": false,
     "links": [
       {
-        "url": "https://trashwizz.itch.io/super-dream-domain",
-        "label": "ItchIO"
+        "url": "https://store.steampowered.com/app/4558440/Dream_Domain/",
+        "label": "Steam"
       }
     ]
   },
@@ -130,7 +130,21 @@
       }
     ]
   },
-    
+
+  {
+    "title": "I ♥ Pizza",
+    "description": "Fort Wayne's 16-bit game company, opening the only retro game-themed pizza place that makes its own Sega Genesis games. They'll be bringing a Sega Genesis and TV so that you can try out some of their games including Summity City Showdown, a fighting game set here in Fort Wayne, Indiana!",
+    "imageSrc": "./images/IHeartPizza.jpg",
+    "videoSrc": "",
+    "shouldDisplayVideo": false,
+    "links": [
+      {
+        "url": "https://www.instagram.com/iheartpizzallc/",
+        "label": "Instagram"
+      }
+    ]
+  },
+
   {
     "title": "PHANTOM CHAINS by GoolWorks",
     "description": "A first person action dungeon crawler with an emphasis on exploration and mystery in a dark fantasy world.",
